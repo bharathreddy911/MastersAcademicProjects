@@ -1,0 +1,120 @@
+Netflix casestudy:
+	movies and tv shows yearly release trends
+	increase in genere release trends
+	month added trend, avg inc, count inc, etc, hue : country , genere
+	increase releases in low release moths as people might be bored without any content
+	artist time taking for each release, projecting time series
+	country wise releaes each month, may be india releases in jan and sept as they are festival releases more watches
+	directors no of movies per yr
+	india emerging tv shows
+	wht content indians produce more , may some other country need dramas as well
+	if sales uptick is needed in india, we can produce more popular content in india as well
+	
+	centering each variable, think of wht all possibilities
+	
+	directors deviation in geners and time to make a movie in each gener, which gener takes long, and which can be completed fast
+	fast making and small crew movies may budget less, and more revenue if demand exist
+	
+	
+1. 70 of Netflix content is in Movies and remaining 30% in TV shows
+4. Different countries have different months as high releases and low releases, most commonly Febrary have very less releases and in few countries June as well
+5. TV shows with less number of season is more popular and Movies with approximate 100 mins duration.
+6. USA & India has producing more Movies and USA & UK has producing more TV Shows.
+Most of the TV shows have 1 season, only few of them went to decent 4-5 seasons
+TV shows are catching up recently along ith the movies and most recent 2021 even with the fall of movies, there is not much fall in TV shows, this shows that TV shows are gaining popularity
+we can infer that directors who make frequent movies, tends to have lesser duration of movies
+In the missing director column values 90%of the missing values are from TV Shows, so hence we are not replacing them, just leaving as nan
+We can say that USA is most interested in Dramas, Comedies, Documentaries, Action and Advenure etc, we can also observe that USA content is better diversified compared to other countries
+ India loves International movies, Dramas, Comedies mostly with high concentration, and rest of the generes they arent much interested
+ In USA there is less content released in the months of Feb and May and very high content released in Jan
+ In India Feb, May and June has very low content released and march April and October have very high release, this may be because of festival and holiday seaso
+ 
+
+
+Since TV Shows are in trending, we needs to produce more shows in popular Genre.
+2. Has less shows being added to Netflix in February, that's best time to release more shows to have higher probability in more viewers.
+Dropping the show with 1 or 2 seasons might result in loss in profit due to the money spent in promoting the series in the initial seasons
+As India has lot of content from International Movies, India is a good place to have more other countries regional content dubbed into International language available
+In USA TV Shows are more popular to other countries, As India is much interested in International content and there is the growth in TV shows content in India, we can make more TV Shows available in Indi
+
+
+
+
+
+Netflix Casestudy feedback:
+	It would have been better if you had analysed Movies and TV-shows separately
+	
+	Value counts and unique attributes : Counts and uniques found
+	You didn't performed non-visual analysis on Duration column
+	You should have also calculated the normalised value_counts for each of your input columns since %age/probabilities are always more meaningful than raw numbers.
+	
+	For continuous & categorical variable(s) : Found, boxplots missing
+	For correlation : heatmaps/pairplots missing, comment if not necessary
+	
+	no comments on outliers check
+	
+	Should include patterns observed in the data along with what you can infer from it 
+	you have gathered many useful insights from your EDA analysis but sadly you have missed some points also
+	
+	Comments on the distribution of the variables and relationship between them : Decent effort
+	you have gathered many useful insights from your EDA analysis but sadly you have missed some points also
+	
+	Actionable items for business. No technical jargon. No complications. Simple action items that everyone can understand : found
+	you have given reasonable recommendations for your business problem based upo your EDA analysis
+	
+	Apart from duration feature , you should have analysed the TV-shows and movies separately for other features also
+	you should have also plotted the amount of content that netflix releases on each day of a week , on each day of a month ( in general , not specifically for top 3 countries) , 
+	who are the most famous actors/directors in recent years, the type of content being watch in different genre in different countries etc
+	You should have performed bivariate analyss in more detail
+	
+	For each decade count of movies across gener category
+	Remove Min and Season from Duration Columns as we dont need them for our analysis
+	df['duration']=df['duration'].str.split(' ',expand=True)[0]
+	
+	df.apply(func,args=[TVshow_duration_value,movie_duration_value],axis=1)  # we can pass arguments to function in  apply like this
+	
+	number of movies can director make in a year avg
+	
+	use CAGR calculaters
+	
+	In recent year TV Show has increased 275% and Movies has increased 107% that
+		means Netflix has more focus on TV Shows than movies in recent years
+	providing value based info below chart will be very helpful than in just chart
+	
+	director-actor combinations highest
+	
+	Avg Delay (in years) for top 5 Genres International Movies, Dramas, Comedies, Documentaries, Action & Adventure release date with respect date added on 
+	Netflix Platform must be less for Movies, some delays are valid for Movies which are older when Netflix Platform was not available but for other cases to increase bussiness 
+	Netflix should keep this delay less.
+	
+	 Netflix adds 45% of its content on Thursdays and Fridays. This may be due to the fact that people are likely to watch more content during weekends. 
+	 
+	  It highly recommend that Movies be added at the beginning of every month.
+	# In addition, Netflix will know when the majority of content is being added. If Netflix team needs to increase the servers, etc., 
+	they can work ahead of time and it will have one time cost per month or quarter.
+	
+	On Netflix, 48% of the content (both Movies and TV shows) is for adults. Based on the analysis, more than 60% of "TV & Shows" content is not suitable for kids. 
+	###### Recommendations -
+	# More kid-friendly content could increase subscriber numbers.
+	
+	
+	
+	
+	Problem Statement:
+
+		Analyze the given dataset to generate insights which could help Netflix decide which show/series to produce.
+
+		How to attract more users/subscribers to grow the business. Also attract more creators as well to the platform.
+
+
+	Risks(What if we don’t do it?)
+
+		Risk of losing current users, less customer retention rate.
+
+		Due to lack of popularity, risk of losing famous/non-famous content creators.
+
+		Increase in stable costs, due to reduced subscribers.
+		
+		
+		
+	

@@ -1,0 +1,39 @@
+
+Clipping:
+	array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+	np.clip(a, 1, 8)
+
+	percentiles = df[col].quantile([0.05,0.95]).values
+	df_copy[col] = np.clip(df_copy[col], percentiles[0], percentiles[1])s
+ 
+best use of correlation plot :
+
+	plt.figure(figsize=(15,6))
+	sns.heatmap(df_copy.corr(), cmap="YlGnBu", annot=True)
+	plt.show()
+
+plt.scatter(df['Income'], df['Miles'],
+            linewidths = 2,
+            marker ="o",
+            edgecolor ="green",
+            s = 50)
+
+My analysis:
+KP281 product has 44% of values out of 3 product -  more people tend to buy cheaper products
+Male holds 58% of the purchases
+ 60% of the people who purchase the product are Married
+ Age of people who buy the products are mostly between 22 and 29
+ all the people who have income above 69k buy the advanced featured treadmill i.e KP781
+ People who brought the premium product i.e KP781 have fitness levels of 5 out of 5 for almost all people and only a few are with 3 and 4 rating
+		and most people from other purchases are only fit with 3 rating
+Most of the people who use threadmill are with fitness rating 3 and people with fitness rating 1 are not buying much
+82% of the people who buy KP781 are males
+Partnered tend to buy 50% of products higher compared to Single across all products
+
+
+Others analysis:
+it is interesting that between the three, fitness has a slighly lower correlation. This could be due to the fact that people can be high-fitness individuals in different ways 
+	other than running.
+	
+i could have converted product from categorical to numerical, so that correlation chould have been well known
+

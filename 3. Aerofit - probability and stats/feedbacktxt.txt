@@ -1,0 +1,33 @@
+how to plot a bar chart, as it is overlapping in seaborn
+https://github.com/kimfetti/Videos/blob/master/Seaborn/14_barplot.ipynb			# stacked barplot
+catplot for multiple plot
+use subplots to reduce the size of the notebook, so keeping it short and sweet
+	eg: hist plot with category hue 
+
+try to use violin plot more sometimes instead of boxplot
+	
+boxplot with histplot:
+	sns.set(style="darkgrid")
+	f, (ax_box, ax_hist) = plt.subplots(2, sharex=True, gridspec_kw={"height_ratios": (.15, .85)})
+	sns.boxplot(data=data,x='Income', ax=ax_box)
+	sns.histplot(data=data, x="Income", ax=ax_hist,kde=True)
+	ax_box.set(xlabel='')
+	plt.show()
+
+My analysis:
+KP281 product has 44% of values out of 3 product -  more people tend to buy cheaper products
+Male holds 58% of the purchases
+ 60% of the people who purchase the product are Married
+ Age of people who buy the products are mostly between 22 and 29
+ all the people who have income above 69k buy the advanced featured treadmill i.e KP781
+ People who brought the premium product i.e KP781 have fitness levels of 5 out of 5 for almost all people and only a few are with 3 and 4 rating
+		and most people from other purchases are only fit with 3 rating
+Most of the people who use threadmill are with fitness rating 3 and people with fitness rating 1 are not buying much
+82% of the people who buy KP781 are males
+Partnered tend to buy 50% of products higher compared to Single across all products
+
+
+Others analysis:
+it is interesting that between the three, fitness has a slighly lower correlation. This could be due to the fact that people can be high-fitness individuals in different ways 
+	other than running.
+	
